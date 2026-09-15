@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/img/lab/bb2b69d6-1080.webp">
+<link rel="preload" as="image" href="assets/video/hero-poster.jpg">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -54,6 +54,11 @@
     <symbol id="i-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></symbol>
     <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></symbol>
     <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
     <symbol id="i-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
   </defs>
 </svg>
@@ -70,8 +75,9 @@
       <a href="#empresa">Empresa</a>
       <a href="#produtos">Produtos</a>
       <a href="#automacao">Automação</a>
+      <a href="#equipe">Equipe</a>
       <a href="#qualidade">Qualidade</a>
-      <a href="#conteudo-cientifico">Conteúdo científico</a>
+      <a href="#conteudo-cientifico">Artigos e notícias</a>
       <a href="#contato" class="nav-contact">Contato</a>
     </nav>
 
@@ -91,42 +97,54 @@
 
   <!-- Hero -->
   <section class="hero" id="inicio" aria-labelledby="hero-title">
-    <div class="hero-grid-bg" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow reveal"><span class="eyebrow-dot" aria-hidden="true"></span><span>Triagem neonatal e <span class="nowrap">pré-natal</span><span class="eyebrow-extra"> · Desde 1994</span></span></p>
-        <h1 id="hero-title" class="hero-title reveal" style="--d:1">
-          Diagnóstico precoce com <span class="text-brand">tecnologia brasileira</span>
-        </h1>
-        <p class="hero-lead reveal" style="--d:2">
-          Desenvolvemos e fabricamos no Brasil kits, reagentes, softwares e cartões de coleta para laboratórios de triagem, com suporte científico constante aos clientes.
-        </p>
-        <div class="hero-actions reveal" style="--d:3">
-          <a class="btn btn-primary" href="#produtos">Conhecer os produtos<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-ghost" href="#contato">Falar com a equipe científica</a>
+    <div class="hero-inner">
+      <div class="hero-copy-wrap">
+        <div class="hero-grid-bg" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow reveal"><span class="eyebrow-dot" aria-hidden="true"></span><span>Triagem neonatal e <span class="nowrap">pré-natal</span><span class="eyebrow-extra"> · Desde 1994</span></span></p>
+          <h1 id="hero-title" class="hero-title reveal" style="--d:1">Inovação, tecnologia <span class="text-brand">e qualidade</span></h1>
+          <p class="hero-lead reveal" style="--d:2">Pioneira em triagem neonatal e pré-natal, a Intercientifica desenvolve e fabrica no Brasil kits, reagentes, softwares e cartões de coleta personalizados para laboratórios.</p>
+          <div class="hero-actions reveal" style="--d:3">
+            <a class="btn btn-primary" href="#produtos">Conhecer os produtos<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="#contato">Falar com a equipe científica</a>
+          </div>
+          <ul class="hero-trust reveal" style="--d:4" aria-label="Credenciais">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Boas Práticas de Fabricação ANVISA</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg>Fabricação 100% nacional</li>
+          </ul>
         </div>
-        <ul class="hero-trust reveal" style="--d:4" aria-label="Credenciais">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Boas Práticas de Fabricação ANVISA</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg>Fabricação 100% nacional</li>
-        </ul>
       </div>
 
-      <div class="hero-visual">
-        <figure class="hero-photo reveal-img">
-          <img src="assets/img/lab/bb2b69d6-1080.webp" srcset="assets/img/lab/bb2b69d6-540.webp 540w, assets/img/lab/bb2b69d6-1080.webp 1080w" sizes="(max-width: 960px) 100vw, 50vw" width="1080" height="882" fetchpriority="high" alt="Analista da Intercientifica preparando um ensaio NeoMAP® na bancada do laboratório">
-        </figure>
-        <div class="hero-float hero-float-kit">
-          <img src="assets/img/produtos/neomap-4plex-480.webp" width="480" height="284" alt="" loading="eager">
+      <div class="hero-media">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg" aria-hidden="true">
+          <source src="assets/video/hero-1600.webm" type="video/webm" media="(min-width: 961px)">
+          <source src="assets/video/hero-1600.mp4" type="video/mp4" media="(min-width: 961px)">
+          <source src="assets/video/hero-960.mp4" type="video/mp4">
+        </video>
+        <div class="hero-shade" aria-hidden="true"></div>
+
+        <div class="hero-kit reveal" style="--d:4">
+          <img src="assets/img/produtos/neomap-4plex-480.webp" width="480" height="284" alt="">
           <div>
             <span class="float-label">Ensaio multiplex</span>
             <strong>NeoMAP® 4Plex</strong>
             <span class="float-sub">TSH, T4, 17-OH e IRT em um único ensaio</span>
           </div>
         </div>
-        <div class="hero-float hero-float-stat">
-          <span class="float-number">+48 mi</span>
-          <span class="float-sub">de análises produzidas</span>
-        </div>
+
+        <a class="hero-news reveal" style="--d:5" href="noticias/teste-do-pezinho-ampliado.html">
+          <img src="assets/img/noticias/hero-pais-640.webp" width="640" height="480" alt="">
+          <span class="hero-news-body">
+            <span class="float-label">Notícia</span>
+            <strong>Teste do Pezinho será ampliado e detectará até 50 novas doenças</strong>
+            <span class="hero-news-link">Leia mais<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </span>
+        </a>
+
+        <button class="hero-video-toggle" type="button" aria-pressed="false" aria-label="Pausar vídeo de fundo">
+          <svg class="icon icon-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+          <svg class="icon icon-play" aria-hidden="true"><use href="#i-play"/></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -165,7 +183,8 @@
           <p class="eyebrow reveal">Quem somos</p>
           <h2 id="empresa-title" class="reveal" style="--d:1">Mais de 30 anos dedicados à <span class="text-brand">triagem neonatal e <span class="nowrap">pré-natal</span></span></h2>
           <p class="reveal" style="--d:2">A Intercientifica é uma empresa pioneira e inovadora, especializada em triagem neonatal e pré-natal, com fabricação 100% nacional de kits, reagentes, softwares e cartões de coleta personalizados para laboratórios.</p>
-          <p class="reveal" style="--d:3">Fundada em 1994 para pesquisar e desenvolver produtos e serviços que garantam eficiência e precisão nos programas de triagem, a empresa já produziu mais de 48 milhões de análises. Com o diagnóstico precoce, milhares de pacientes e famílias tiveram acesso a tratamentos específicos e a uma vida saudável.</p>
+          <p class="reveal" style="--d:3">Fundada em 1994, com objetivo social de pesquisar, desenvolver produtos e serviços que garantam eficiência e precisão em programas de triagem de doenças neonatais e pré-natais.</p>
+          <p class="reveal" style="--d:3">São 30 anos de experiência na área de triagem neonatal e pré-natal. Neste período a Intercientifica já produziu mais de 48 milhões de análises, beneficiando a qualidade de vida de milhares de pacientes e de seus familiares, pois com o diagnóstico precoce foi possível obter acesso aos tratamentos específicos e desenvolver uma vida saudável.</p>
 
           <div class="vm-grid reveal" style="--d:4">
             <article class="vm-card">
@@ -176,7 +195,7 @@
             <article class="vm-card">
               <span class="vm-icon" aria-hidden="true"><svg class="icon"><use href="#i-target"/></svg></span>
               <h3>Missão</h3>
-              <p>Fornecer produtos e serviços de qualidade, com investimento constante em pesquisa e desenvolvimento, e oferecer suporte contínuo aos clientes.</p>
+              <p>Fornecer produtos e serviços de qualidade, através de investimentos constantes na pesquisa, desenvolvimento e aprimoramento de seus produtos, de maneira independente, procurando sempre atender às necessidades do mercado. Buscar continuamente soluções por meio de novas ferramentas, tecnologias e produtos. E disponibilizar suporte constante aos clientes.</p>
             </article>
           </div>
         </div>
@@ -186,15 +205,33 @@
         <h3 class="valores-title reveal">Nossos valores</h3>
         <ul class="valores-list">
           <li class="reveal"><strong>Inovação</strong><span>Estimular a equipe na busca constante pela inovação de produtos e processos.</span></li>
-          <li class="reveal" style="--d:1"><strong>Independência</strong><span>Desenvolvimento que reduz a dependência de outras empresas.</span></li>
-          <li class="reveal" style="--d:2"><strong>Imagem</strong><span>Divulgar a empresa nacional como solução para as necessidades do mercado.</span></li>
-          <li class="reveal"><strong>Qualidade</strong><span>Superar as expectativas dos clientes quanto a produtos e serviços.</span></li>
-          <li class="reveal" style="--d:1"><strong>Custos</strong><span>Monitorar e reduzir desperdícios para ter processos enxutos.</span></li>
-          <li class="reveal" style="--d:2"><strong>Entrega</strong><span>Atender os pedidos por ordem de chegada, no tempo certo.</span></li>
-          <li class="reveal"><strong>Ética</strong><span>Relações com clientes e funcionários baseadas em ética e boa conduta.</span></li>
-          <li class="reveal" style="--d:1"><strong>Segurança</strong><span>Garantir a segurança dos usuários e apoiar o sistema de gestão da qualidade.</span></li>
-          <li class="reveal" style="--d:2"><strong>Sustentabilidade</strong><span>Usar os recursos naturais com consciência e destinar os resíduos corretamente.</span></li>
+          <li class="reveal" style="--d:1"><strong>Independência</strong><span>Desenvolvimento visando a reduzir a dependência com outras empresas.</span></li>
+          <li class="reveal" style="--d:2"><strong>Imagem</strong><span>Elevar e divulgar a imagem da empresa nacional como solução para as necessidades do mercado.</span></li>
+          <li class="reveal"><strong>Qualidade</strong><span>Superar as expectativas dos clientes quanto aos nossos produtos e serviços.</span></li>
+          <li class="reveal" style="--d:1"><strong>Custos</strong><span>Monitorar continuamente e reduzir desperdícios para a obtenção de processos enxutos.</span></li>
+          <li class="reveal" style="--d:2"><strong>Entrega</strong><span>Atender por ordem de pedidos os clientes no tempo certo.</span></li>
+          <li class="reveal"><strong>Ética</strong><span>Garantir que as relações com clientes e funcionários sejam baseadas na ética e conduta dos negócios e na empresa.</span></li>
+          <li class="reveal" style="--d:1"><strong>Segurança</strong><span>Trabalhar de maneira eficiente, garantindo a segurança dos usuários e apoiando nosso sistema de gestão da qualidade, que tem como base a inovação de processos visando a melhoria contínua.</span></li>
+          <li class="reveal" style="--d:2"><strong>Sustentabilidade</strong><span>Utilizar de maneira consciente os recursos naturais e buscar a redução e destinação correta de resíduos.</span></li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vídeo institucional -->
+  <section class="video-inst section" id="video" aria-labelledby="video-title">
+    <div class="container video-grid">
+      <div class="video-copy">
+        <p class="eyebrow reveal">Vídeo institucional</p>
+        <h2 id="video-title" class="reveal" style="--d:1">Conheça a <span class="text-brand">Intercientifica</span></h2>
+        <p class="reveal" style="--d:2">Assista ao vídeo institucional, com legendas, e conheça a história e o trabalho da empresa na triagem neonatal e pré-natal.</p>
+      </div>
+      <div class="video-frame reveal-img" style="--d:1">
+        <button class="video-play" type="button" data-youtube="3fu_8y8yOsU" aria-label="Assistir ao vídeo institucional da Intercientifica, legendado">
+          <img src="https://i.ytimg.com/vi/3fu_8y8yOsU/hqdefault.jpg" width="480" height="360" alt="" loading="lazy">
+          <span class="video-play-icon" aria-hidden="true"><svg class="icon"><use href="#i-play"/></svg></span>
+          <span class="video-play-label">INTERCIENTÍFICA · Vídeo institucional legendado</span>
+        </button>
       </div>
     </div>
   </section>
@@ -219,6 +256,13 @@
             <li><svg class="icon" aria-hidden="true"><use href="#i-timer"/></svg><strong>+50%</strong><span>de redução no tempo de processamento</span></li>
           </ul>
           <p class="line-note">Comparação com outras metodologias disponíveis no mercado, segundo dados da Intercientifica.</p>
+          <ul class="line-points line-points-dark">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Ensaio manual e automatizado</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Maior facilidade na integração dos dados</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Precisão de 50 a 100 vezes maior que os métodos fluorimétricos ELISA tradicionais</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Redução do volume de água reagente, material para descarte e menor dependência de espaço físico</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Diminuição de volume de picotagem e microplacas</li>
+          </ul>
           <p class="line-kits-title">Triagens atendidas</p>
           <ul class="line-kits line-kits-dark" aria-label="Triagens atendidas pela linha NeoMAP®">
             <li>Hipotireoidismo Congênito</li><li>Hiperplasia Adrenal Congênita</li><li>Fibrose Cística</li><li>Toxoplasmose</li><li>Rubéola</li><li>Citomegalovírus</li>
@@ -229,7 +273,9 @@
           <h3>NeoLISA®</h3>
           <p>Kits para a triagem de doenças em recém-nascidos, com opções de ensaio manual, semiautomatizado e automatizado, conforme o produto.</p>
           <ul class="line-points">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Ensaio manual, semiautomatizado e automatizado</li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Tempo reduzido de ensaio</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Não sofre interferência de antibióticos ou outros medicamentos</li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Altamente sensível e específico</li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Procedimento laboratorial simplificado</li>
           </ul>
@@ -327,7 +373,7 @@
               <ul>
                 <li>Ensaio manual, semiautomatizado e automatizado</li>
                 <li>Tempo reduzido de ensaio</li>
-                <li>Não sofre interferência de antibióticos ou outros medicamentos</li>
+                <li>Não sofre intercorrências de antibióticos ou outros medicamentos</li>
                 <li>Altamente sensível e específico</li>
               </ul>
             </details>
@@ -481,12 +527,16 @@
   </section>
 
   <!-- Laboratório -->
-  <section class="lab section" aria-labelledby="lab-title">
+  <section class="lab section" id="equipe" aria-labelledby="lab-title">
     <div class="container lab-inner">
       <div class="lab-copy">
-        <p class="eyebrow reveal">Laboratório</p>
-        <h2 id="lab-title" class="reveal" style="--d:1">Pesquisa e desenvolvimento <span class="text-brand">de última geração</span></h2>
-        <p class="reveal" style="--d:2">Os laboratórios da Intercientifica, no Brasil e nos Estados Unidos, estão equipados com instrumentos de última geração e da mais alta tecnologia. A empresa investe fortemente em pesquisa científica e no aprimoramento dos seus produtos e serviços.</p>
+        <p class="eyebrow reveal">Nossa equipe</p>
+        <h2 id="lab-title" class="reveal" style="--d:1">Ciência feita por <span class="text-brand">especialistas</span></h2>
+        <p class="reveal" style="--d:2">A qualidade e a excelência dos nossos produtos se devem ao alto nível de qualificação do nosso time de colaboradores e pesquisadores formado por doutores, mestres, especialistas em suas respectivas áreas, com experiências em órgãos internacionais de pesquisa e de ensino superior, tendo diversos trabalhos científicos publicados em revistas e jornais científicos nacionais e internacionais.</p>
+        <p class="reveal" style="--d:3">A nossa equipe de profissionais é composta por Biólogos, Biomédicos, Farmacêuticos, Químicos, Engenheiros e Administradores que prezam pelo aperfeiçoamento continuado.</p>
+        <ul class="team-roles reveal" style="--d:4" aria-label="Formação da equipe">
+          <li>Biólogos</li><li>Biomédicos</li><li>Farmacêuticos</li><li>Químicos</li><li>Engenheiros</li><li>Administradores</li>
+        </ul>
       </div>
       <div class="lab-mosaic">
         <figure class="reveal-img"><img src="assets/img/lab/99eb321d-540.webp" width="540" height="441" loading="lazy" alt="Pipeta multicanal dispensando amostras em microplaca"></figure>
@@ -509,7 +559,7 @@
           <div>
             <span class="cert-kicker">ANVISA</span>
             <h3>Boas Práticas de Fabricação e Controle de Produtos para a Saúde, In Vitro Classes III e IV</h3>
-            <p>O laboratório e todos os processos, procedimentos e registros atendem à certificação, com inspeções periódicas da autoridade sanitária brasileira.</p>
+            <p>Nosso laboratório, bem como todos os nossos processos, procedimentos e registros atendem à certificação de Boas Práticas de Fabricação e Controle de Produtos para a Saúde, através de inspeções periódicas da autoridade sanitária brasileira, a ANVISA.</p>
           </div>
         </article>
 
@@ -544,13 +594,31 @@
       <div class="compromisso-copy">
         <p class="eyebrow eyebrow-light reveal">Nosso compromisso</p>
         <h2 id="compromisso-title" class="reveal" style="--d:1">Servir o presente sem comprometer o futuro</h2>
-        <p class="reveal" style="--d:2">Nosso compromisso se apoia em três pilares: inovação, atendimento de excelência e sustentabilidade. Investimos em pesquisa para avançar a qualidade da triagem neonatal e pré-natal, com menos insumos, menos custos e menos impacto ambiental.</p>
+        <p class="reveal" style="--d:2">O nosso compromisso está sustentado em três pilares: inovação, atendimento de excelência e a sustentabilidade. Investimos fortemente em pesquisas científicas e no aprimoramento dos nossos produtos e serviços para atender de forma personalizada principalmente o Mercado Nacional.</p>
+        <p class="reveal" style="--d:2">Estamos comprometidos em desenvolver soluções inovadoras para avançar ainda mais na qualidade da triagem neonatal e pré-natal, com foco na redução de insumos e custos. Para isso, os nossos laboratórios, no Brasil e nos USA, estão equipados com instrumentos de última geração e da mais alta tecnologia.</p>
+        <p class="reveal" style="--d:3">Os nossos Kits NeoMAP®, sistema multiplex, analisam simultaneamente, em um único ensaio, vários analitos de uma mesma amostra, reduzindo em até 85% o consumo médio de reagentes e em 58% o consumo de energia elétrica, quando comparados a outras metodologias disponíveis no mercado. Isso permite uma economia não somente de tempo e dinheiro, como também a redução da quantidade de amostras de paciente, materiais e recursos, reduzindo o impacto ambiental.</p>
+        <p class="reveal" style="--d:3">Nós entendemos que a nossa saúde e a saúde do nosso planeta, ou seja, o meio ambiente, estão intrinsecamente ligados. Por isso, o nosso compromisso é servir o presente, sem comprometer o futuro.</p>
       </div>
       <ul class="pillars">
         <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg><strong>Inovação</strong><span>Pesquisa científica constante e aprimoramento dos produtos.</span></li>
         <li class="reveal" style="--d:1"><svg class="icon" aria-hidden="true"><use href="#i-headset"/></svg><strong>Atendimento de excelência</strong><span>Atendimento personalizado e suporte constante aos clientes.</span></li>
         <li class="reveal" style="--d:2"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><strong>Sustentabilidade</strong><span>Mais de 75% menos plástico, papel e microplacas com o NeoMAP® 4PLEX.</span></li>
       </ul>
+    </div>
+  </section>
+
+  <!-- Eventos -->
+  <section class="eventos" id="eventos" aria-labelledby="eventos-title">
+    <div class="container">
+      <p class="eyebrow reveal">Eventos</p>
+      <a class="event-card reveal" style="--d:1" href="https://www.aphl.org/programs/newborn_screening/Pages/default.aspx" target="_blank" rel="noopener">
+        <span class="event-date" aria-hidden="true"><span>Out</span><strong>15–19</strong></span>
+        <span class="event-body">
+          <strong id="eventos-title" class="event-title">Newborn Screening Symposium</strong>
+          <span class="event-meta"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Simpósio de Triagem Neonatal · Outubro 15–19 · Sacramento, CA</span>
+        </span>
+        <span class="event-cta">Ver o site do evento<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+      </a>
     </div>
   </section>
 
@@ -577,39 +645,47 @@
     <div class="container">
       <div class="section-head section-head-split">
         <div>
-          <p class="eyebrow reveal">Conteúdo científico</p>
+          <p class="eyebrow reveal">Artigos e notícias</p>
           <h2 id="conteudo-title" class="reveal" style="--d:1">Estudos e <span class="text-brand">notícias</span></h2>
         </div>
-        <a class="link-arrow reveal" style="--d:2" href="https://www.intercientifica.com.br/artigos" target="_blank" rel="noopener">Ver todos os artigos<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="section-sub reveal" style="--d:2">14 notícias e 25 artigos científicos publicados pela Intercientifica.</p>
       </div>
 
-      <div class="posts">
-        <a class="post post-featured reveal" href="https://www.intercientifica.com.br/post/performance-of-the-neomap-5plex-ht-multiplex-kit-for-simultaneous-detection-of-t4-17ohp-irt-tsh" target="_blank" rel="noopener">
-          <span class="post-type"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Artigo</span>
-          <h3>Performance of the NeoMAP® 5plex HT multiplex kit for simultaneous detection of T4, 17OHP, IRT, TSH</h3>
-          <p>Estudo que avaliou o desempenho do kit NeoMAP® 5plex HT na detecção simultânea de parâmetros da triagem neonatal.</p>
-          <span class="post-link">Ler artigo<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
-        </a>
-        <a class="post reveal" style="--d:1" href="https://www.intercientifica.com.br/post/valida%C3%A7%C3%A3o-anal%C3%ADtica-do-neomap-4plex-tsh-t4-17oh-irt-em-ensaio-automatizado-nimbus-neomap" target="_blank" rel="noopener">
-          <span class="post-type"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Artigo</span>
-          <h3>Validação analítica do NeoMAP® 4PLEX em ensaio automatizado NIMBUS®</h3>
-          <span class="post-link">Ler artigo<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
-        </a>
-        <a class="post reveal" style="--d:2" href="https://www.intercientifica.com.br/1750300analisesjarealizadascomokitneomap4plex" target="_blank" rel="noopener">
-          <span class="post-type"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Notícia</span>
-          <h3>1.750.300 análises já realizadas com o Kit NeoMAP® 4PLEX</h3>
-          <span class="post-link">Ler notícia<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
-        </a>
-        <a class="post reveal" style="--d:3" href="https://www.intercientifica.com.br/biotinidasetestequalitativoouquantitativo" target="_blank" rel="noopener">
-          <span class="post-type"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Notícia</span>
-          <h3>Biotinidase: teste qualitativo ou quantitativo?</h3>
-          <span class="post-link">Ler notícia<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
-        </a>
-        <a class="post reveal" style="--d:4" href="https://www.intercientifica.com.br/testedopezinhoser%C3%A1ampliadoedetectar%C3%A1at%C3%A950novasdoen%C3%A7as" target="_blank" rel="noopener">
-          <span class="post-type"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Notícia</span>
-          <h3>Teste do Pezinho será ampliado e detectará até 50 novas doenças</h3>
-          <span class="post-link">Ler notícia<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
-        </a>
+      <div class="home-posts">
+        <div class="home-posts-col reveal">
+          <h3>Notícias</h3>
+          <div class="news-cards">
+          <a class="news-card" href="noticias/congresso-internacional-de-triagem-neonatal-aphl-isns-newborn-screening.html">
+            <img src="assets/img/noticias/0-640.webp" width="640" height="853" alt="" loading="lazy">
+            <span class="news-card-body"><strong>Congresso Internacional de Triagem Neonatal APHL/ISNS Newborn Screening Symposium</strong><span>É com grande satisfação que compartilhamos com vocês os resultados do nosso trabalho…</span></span>
+          </a>
+          <a class="news-card" href="noticias/1-750-300-analises-ja-realizadas-com-o-kit-neomap-4plex.html">
+            <img src="assets/img/noticias/1-640.webp" width="640" height="407" alt="" loading="lazy">
+            <span class="news-card-body"><strong>1.750.300 análises já realizadas com o Kit NeoMAP® 4PLEX</strong><span>Este marco representa o primeiro passo para a mais importante implementação no mercado de…</span></span>
+          </a>
+          <a class="news-card" href="noticias/biotinidase-teste-qualitativo-ou-quantitativo.html">
+            <img src="assets/img/noticias/2-640.webp" width="640" height="509" alt="" loading="lazy">
+            <span class="news-card-body"><strong>Biotinidase – Teste Qualitativo ou Quantitativo?</strong><span>Em 2015, a Secretaria de Atenção à Saúde, que integra o Departamento de Atenção Especializada…</span></span>
+          </a>
+          <a class="news-card" href="noticias/intercientifica-recebe-da-anvisa-o-certificado-de-boas-praticas-de-fabri.html">
+            <img src="assets/img/noticias/3-640.webp" width="640" height="360" alt="" loading="lazy">
+            <span class="news-card-body"><strong>Intercientifica recebe da ANVISA o Certificado de Boas Práticas de Fabricação Classe de Risco III</strong><span>Em 2009, a INTERCIENTIFICA recebeu o Certificado de BPF (Boas Práticas de Fabricação) da…</span></span>
+          </a>
+          </div>
+          <div class="home-posts-actions"><a class="btn btn-ghost" href="noticias/">Ver todas as notícias<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+        <div class="home-posts-col reveal" style="--d:1">
+          <h3>Artigos científicos</h3>
+          <ul class="article-rows">
+            <li><a href="artigos/performance-of-the-neomap-5plex-ht-multiplex-kit-for-simultaneous-detect.html"><span>Performance of the NeoMAP® 5plex HT multiplex kit for simultaneous detection of T4, 17OHP, IRT, TSH</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="artigos/validacao-analitica-do-neomap-4plex-tsh-t4-17oh-irt-em-ensaio-automatiza.html"><span>Validação analítica do NeoMAP® 4PLEX TSH T4 17OH IRT em ensaio automatizado NIMBUS® NeoMAP®</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="artigos/comparativo-de-tsh-entre-o-metodo-meia-utilizando-soro-e-o-fluorimetrico.html"><span>Comparativo de TSH entre o Método MEIA Utilizando Soro e o Fluorimétrico Multiplex Simultâneo</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="artigos/caracterizacao-molecular-da-deficiencia-da-glicose-6-fosfato-desidrogena.html"><span>Caracterização molecular da Deficiência da Glicose-6-Fosfato Desidrogenase (G6PD)</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="artigos/deficiencia-de-g-6-pd-nos-recem-nascidos-de-uberaba-mg-2005.html"><span>Deficiência de G-6-PD nos recém-nascidos de Uberaba, MG. (2005)</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="artigos/comparativo-entre-metodologias-na-dosagem-de-tsh-neonatal-2005.html"><span>Comparativo entre metodologias na dosagem de TSH neonatal.(2005)</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          </ul>
+          <div class="home-posts-actions"><a class="btn btn-ghost" href="artigos/">Ver todos os 25 artigos<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
       </div>
     </div>
   </section>
@@ -620,7 +696,7 @@
       <div class="contato-info">
         <p class="eyebrow reveal">Contato</p>
         <h2 id="contato-title" class="reveal" style="--d:1">Fale com a nossa <span class="text-brand">equipe científica</span></h2>
-        <p class="reveal" style="--d:2">Tire dúvidas sobre produtos, validação, automação ou assuntos comerciais.</p>
+        <p class="reveal" style="--d:2">Para saber mais sobre nossos produtos, entre em contato com nossa equipe científica.</p>
 
         <ul class="contact-list reveal" style="--d:3">
           <li>
@@ -653,9 +729,14 @@
             <p class="field-error" id="e-nome"></p>
           </div>
           <div class="field">
-            <label for="f-empresa">Laboratório ou instituição</label>
-            <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+            <label for="f-sobrenome">Sobrenome</label>
+            <input id="f-sobrenome" name="sobrenome" type="text" autocomplete="family-name">
           </div>
+        </div>
+
+        <div class="field">
+          <label for="f-empresa">Laboratório ou instituição</label>
+          <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
         </div>
 
         <div class="field-row">
@@ -666,7 +747,27 @@
           </div>
           <div class="field">
             <label for="f-tel">Telefone</label>
-            <input id="f-tel" name="telefone" type="tel" autocomplete="tel" inputmode="tel">
+            <div class="tel-wrap">
+              <label class="sr-only" for="f-ddi">Código do país</label>
+              <select id="f-ddi" name="ddi" autocomplete="tel-country-code">
+                <option value="+55" selected>BR +55</option>
+                <option value="+1">US +1</option>
+                <option value="+54">AR +54</option>
+                <option value="+591">BO +591</option>
+                <option value="+56">CL +56</option>
+                <option value="+57">CO +57</option>
+                <option value="+593">EC +593</option>
+                <option value="+52">MX +52</option>
+                <option value="+595">PY +595</option>
+                <option value="+51">PE +51</option>
+                <option value="+598">UY +598</option>
+                <option value="+58">VE +58</option>
+                <option value="+351">PT +351</option>
+                <option value="+34">ES +34</option>
+                <option value="">Outro</option>
+              </select>
+              <input id="f-tel" name="telefone" type="tel" autocomplete="tel-national" inputmode="tel">
+            </div>
           </div>
         </div>
 
@@ -719,7 +820,11 @@
         <li><a href="#empresa">Empresa</a></li>
         <li><a href="#produtos">Produtos</a></li>
         <li><a href="#automacao">Automação</a></li>
+        <li><a href="#equipe">Equipe</a></li>
         <li><a href="#qualidade">Qualidade</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="noticias/">Notícias</a></li>
+        <li><a href="artigos/">Artigos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </div>
@@ -742,7 +847,7 @@
     </div>
   </div>
   <div class="container footer-legal">
-    <p>© 2026 Intercientifica. Av. Shishima Hifumi, 2911, São José dos Campos, SP.</p>
+    <p>© 2026 Intercientifica. Av. Shishima Hifumi, 2911, Pq. Tecnológico UNIVAP, MOD 306-309, CEP 12244-000, São José dos Campos, São Paulo, Brasil.</p>
     <p>Proposta de redesign desenvolvida por <a href="https://apex-web-oficial.netlify.app/" target="_blank" rel="noopener">Apex Web</a>.</p>
   </div>
 </footer>

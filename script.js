@@ -45,7 +45,8 @@
   const navLinks = [...nav.querySelectorAll('a[href^="#"]')];
   const observed = [...new Set(navLinks.map(a => a.getAttribute('href')))]
     .map(id => document.querySelector(id)).filter(Boolean);
-  observed.push(document.getElementById('inicio'));
+  const inicio = document.getElementById('inicio');
+  if (inicio) observed.push(inicio);
   if ('IntersectionObserver' in window) {
     const activeObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -91,6 +92,23 @@
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
     revealEls.forEach(el => revealObserver.observe(el));
+    // Quem pula direto para uma âncora passa por cima de seções sem que elas
+    // cruzem a tela; tudo que já ficou acima da dobra é revelado também.
+    let revealTick = false;
+    window.addEventListener('scroll', () => {
+      if (revealTick) return;
+      revealTick = true;
+      requestAnimationFrame(() => {
+        revealEls.forEach(el => {
+          if (!el.classList.contains('is-in') && el.getBoundingClientRect().top < window.innerHeight) {
+            el.classList.add('is-in');
+            el.querySelectorAll('[data-count]').forEach(countUp);
+            revealObserver.unobserve(el);
+          }
+        });
+        revealTick = false;
+      });
+    }, { passive: true });
   }
 
   function markReady() { requestAnimationFrame(() => document.body.classList.add('is-ready')); }
@@ -126,8 +144,52 @@
     link.addEventListener('click', () => applyFilter(link.dataset.gotoFilter));
   });
 
+  // Vídeo de fundo do topo: pausa manual, respeita redução de movimento
+  // e para quando sai da tela.
+  const heroVideo = document.querySelector('.hero-video');
+  const heroToggle = document.querySelector('.hero-video-toggle');
+  if (heroVideo && heroToggle) {
+    let userPaused = false;
+    function setVideoPaused(paused) {
+      if (paused) heroVideo.pause();
+      else heroVideo.play().catch(() => {});
+      heroToggle.setAttribute('aria-pressed', String(paused));
+      heroToggle.setAttribute('aria-label', paused ? 'Reproduzir vídeo de fundo' : 'Pausar vídeo de fundo');
+    }
+    if (reducedMotion) {
+      heroVideo.removeAttribute('autoplay');
+      userPaused = true;
+      setVideoPaused(true);
+    }
+    heroToggle.addEventListener('click', () => {
+      userPaused = !userPaused;
+      setVideoPaused(userPaused);
+    });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => {
+        if (userPaused) return;
+        if (entry.isIntersecting) heroVideo.play().catch(() => {});
+        else heroVideo.pause();
+      }, { threshold: 0.1 }).observe(heroVideo);
+    }
+  }
+
+  // Vídeo institucional: carrega o YouTube só quando a pessoa pede.
+  document.querySelectorAll('.video-play[data-youtube]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${btn.dataset.youtube}?autoplay=1&rel=0&cc_load_policy=1&hl=pt-BR`;
+      iframe.title = 'INTERCIENTÍFICA, vídeo institucional legendado';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      btn.replaceWith(iframe);
+      iframe.focus();
+    });
+  });
+
   // Formulário: validação e envio pelo aplicativo de e-mail
   const form = document.getElementById('contact-form');
+  if (!form) return;
   const status = document.getElementById('form-status');
   const rules = {
     nome: v => v.trim().length >= 2 || 'Informe seu nome.',
@@ -173,10 +235,10 @@
     const data = new FormData(form);
     const subject = `[Site] ${data.get('assunto')}`;
     const body = [
-      `Nome: ${data.get('nome')}`,
+      `Nome: ${[data.get('nome'), data.get('sobrenome')].filter(Boolean).join(' ')}`,
       `Laboratório ou instituição: ${data.get('empresa') || 'não informado'}`,
       `E-mail: ${data.get('email')}`,
-      `Telefone: ${data.get('telefone') || 'não informado'}`,
+      `Telefone: ${data.get('telefone') ? `${data.get('ddi') || ''} ${data.get('telefone')}`.trim() : 'não informado'}`,
       '',
       data.get('mensagem')
     ].join('\n');
