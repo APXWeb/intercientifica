@@ -242,6 +242,25 @@
       '',
       data.get('mensagem')
     ].join('\n');
+    const whatsapp = (form.dataset.whatsapp || '').replace(/\D/g, '');
+    if (whatsapp) {
+      const text = [
+        'Olá! Vim pelo site da Intercientifica.',
+        '',
+        `*Assunto:* ${data.get('assunto')}`,
+        `*Nome:* ${[data.get('nome'), data.get('sobrenome')].filter(Boolean).join(' ')}`,
+        `*Laboratório ou instituição:* ${data.get('empresa') || 'não informado'}`,
+        `*E-mail:* ${data.get('email')}`,
+        `*Telefone:* ${data.get('telefone') ? `${data.get('ddi') || ''} ${data.get('telefone')}`.trim() : 'não informado'}`,
+        '',
+        '*Mensagem:*',
+        data.get('mensagem')
+      ].join('\n');
+      window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+      status.className = 'form-status is-success';
+      status.textContent = 'Abrimos o WhatsApp da Intercientifica com a sua mensagem pronta. Basta tocar em enviar.';
+      return;
+    }
     window.location.href = `mailto:ic@intercientifica.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     status.className = 'form-status is-success';
     status.textContent = 'Abrimos o seu aplicativo de e-mail com a mensagem pronta. Basta enviar por lá.';
