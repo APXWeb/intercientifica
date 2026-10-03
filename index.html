@@ -23,6 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/video/hero-poster.jpg">
 <link rel="stylesheet" href="styles.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js"}}</script>
 </head>
 <body>
 
@@ -486,6 +487,62 @@
     </div>
   </section>
 
+  <!-- Como funciona o NeoMAP®: microesferas em 3D controladas pelo scroll (assets/js/microesferas.js) -->
+  <section class="multiplex section" id="multiplex" aria-labelledby="multiplex-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Como funciona o NeoMAP®</p>
+        <h2 id="multiplex-title" class="reveal" style="--d:1">Uma amostra, <span class="text-brand">vários resultados</span></h2>
+        <p class="section-sub reveal" style="--d:2">O caminho de uma amostra no ensaio multiplex, do cartão de coleta à leitura. Os fatos são da Intercientifica; a animação é um esquema ilustrativo.</p>
+      </div>
+
+      <div class="mx" id="mx">
+        <div class="mx__steps">
+          <article class="mx__step is-active" data-mx="0">
+            <p class="mx__n">01 · Coleta</p>
+            <h3>Uma gota de sangue no papel filtro</h3>
+            <p>A triagem neonatal parte de amostras de sangue seco coletadas em papel filtro. A Intercientifica fabrica <strong>cartões de coleta de sangue personalizados</strong> para laboratórios.</p>
+          </article>
+          <article class="mx__step" data-mx="1">
+            <p class="mx__n">02 · Picote</p>
+            <h3>Um único picote de 3,00 mm</h3>
+            <p>Com o NeoMAP® 4PLEX, <strong>um único picote de 3,00 mm é suficiente</strong> para obter os resultados dos quatro marcadores, o que reduz o consumo da amostra e aprimora o tempo de preparo da rotina.</p>
+          </article>
+          <article class="mx__step" data-mx="2">
+            <p class="mx__n">03 · Ensaio multiplex</p>
+            <h3>Quatro marcadores no mesmo orifício</h3>
+            <p>Os kits NeoMAP® utilizam a plataforma xMAP®, da Luminex®: vários analitos de uma mesma amostra são analisados em um único ensaio, <strong>dentro do mesmo orifício, em suspensão</strong>. O NeoMAP® 4Plex detecta simultaneamente:</p>
+            <ul class="mx__analytes" aria-label="Marcadores do NeoMAP® 4Plex">
+              <li><i class="mx-c0" aria-hidden="true"></i>TSH</li><li><i class="mx-c1" aria-hidden="true"></i>T4</li><li><i class="mx-c2" aria-hidden="true"></i>17-OH</li><li><i class="mx-c3" aria-hidden="true"></i>IRT</li>
+            </ul>
+          </article>
+          <article class="mx__step" data-mx="3">
+            <p class="mx__n">04 · Leitura</p>
+            <h3>Vinte e cinco leituras por marcador</h3>
+            <p>O ensaio multiplex realiza a leitura de <strong>25 análises para cada parâmetro</strong> em cada amostra de paciente, e o resultado final representa a média dessas 25 réplicas. Para os quatro parâmetros, o tempo de processamento é reduzido em 3 vezes.</p>
+            <p class="mx__src">Fonte: <a href="noticias/1-750-300-analises-ja-realizadas-com-o-kit-neomap-4plex.html">1.750.300 análises já realizadas com o Kit NeoMAP® 4PLEX</a></p>
+          </article>
+        </div>
+
+        <div class="mx__aside">
+          <div class="mx__stage" id="mx-stage" data-step="0">
+            <div class="mx__still" aria-hidden="true">
+              <img data-still="0" class="is-on" src="assets/img/microesferas/0-1200.webp" srcset="assets/img/microesferas/0-600.webp 600w, assets/img/microesferas/0-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 55vw" width="1200" height="960" alt="" loading="lazy" decoding="async">
+              <img data-still="1" src="assets/img/microesferas/1-1200.webp" srcset="assets/img/microesferas/1-600.webp 600w, assets/img/microesferas/1-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 55vw" width="1200" height="960" alt="" loading="lazy" decoding="async">
+              <img data-still="2" src="assets/img/microesferas/2-1200.webp" srcset="assets/img/microesferas/2-600.webp 600w, assets/img/microesferas/2-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 55vw" width="1200" height="960" alt="" loading="lazy" decoding="async">
+              <img data-still="3" src="assets/img/microesferas/3-1200.webp" srcset="assets/img/microesferas/3-600.webp 600w, assets/img/microesferas/3-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 55vw" width="1200" height="960" alt="" loading="lazy" decoding="async">
+            </div>
+            <canvas aria-hidden="true"></canvas>
+            <div class="mx__axes" aria-hidden="true"><span class="mx__ax-x"></span><span class="mx__ax-y"></span><span class="mx__lx">classificação por cor</span><span class="mx__ly">sinal</span></div>
+            <div class="mx__tags" aria-hidden="true"><span data-tag="0" style="left:24.5%;top:59.4%"><i class="mx-c0"></i>TSH</span><span data-tag="1" style="left:46.7%;top:29%"><i class="mx-c1"></i>T4</span><span data-tag="2" style="left:66.6%;top:43.5%"><i class="mx-c2"></i>17-OH</span><span data-tag="3" style="left:77.7%;top:18.6%"><i class="mx-c3"></i>IRT</span></div>
+            <p class="mx__count" aria-hidden="true">Etapa <b data-mx-count>1</b>/4 · <span data-mx-label>Coleta</span></p>
+          </div>
+          <p class="mx__cap">Representação ilustrativa, fora de escala. Não reproduz um procedimento validado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Automação e cartões -->
   <section class="automacao section" id="automacao" aria-labelledby="automacao-title">
     <div class="container">
@@ -520,6 +577,93 @@
             <span class="solution-icon" aria-hidden="true"><svg class="icon"><use href="#i-card"/></svg></span>
             <h3>Cartões de coleta</h3>
             <p>Cartões de coleta de sangue personalizados para laboratórios.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Automação, de perto: Opentrons® Flex em 3D controlado pelo scroll (assets/js/flex.js) -->
+    <div class="flex3d" id="flex-3d" role="region" aria-labelledby="flex3d-title">
+      <div class="flex3d__stage">
+        <div class="flex3d__still" aria-hidden="true">
+          <img data-still="intro" class="is-on" src="assets/img/flex/intro-1600.webp" srcset="assets/img/flex/intro-800.webp 800w, assets/img/flex/intro-1600.webp 1600w" sizes="100vw" width="1600" height="1000" alt="" loading="lazy" decoding="async">
+          <img data-still="estrutura" src="assets/img/flex/estrutura-1600.webp" srcset="assets/img/flex/estrutura-800.webp 800w, assets/img/flex/estrutura-1600.webp 1600w" sizes="100vw" width="1600" height="1000" alt="" loading="lazy" decoding="async">
+          <img data-still="portico" src="assets/img/flex/portico-1600.webp" srcset="assets/img/flex/portico-800.webp 800w, assets/img/flex/portico-1600.webp 1600w" sizes="100vw" width="1600" height="1000" alt="" loading="lazy" decoding="async">
+          <img data-still="deck" src="assets/img/flex/deck-1600.webp" srcset="assets/img/flex/deck-800.webp 800w, assets/img/flex/deck-1600.webp 1600w" sizes="100vw" width="1600" height="1000" alt="" loading="lazy" decoding="async">
+          <img data-still="interface" src="assets/img/flex/interface-1600.webp" srcset="assets/img/flex/interface-800.webp 800w, assets/img/flex/interface-1600.webp 1600w" sizes="100vw" width="1600" height="1000" alt="" loading="lazy" decoding="async">
+          <img data-still="final" src="assets/img/flex/final-1600.webp" srcset="assets/img/flex/final-800.webp 800w, assets/img/flex/final-1600.webp 1600w" sizes="100vw" width="1600" height="1000" alt="" loading="lazy" decoding="async">
+        </div>
+        <canvas aria-hidden="true"></canvas>
+        <div class="flex3d__pins" aria-hidden="true">
+          <span class="pin pin--tag" data-pin="0,-0.05,0.405" data-for="estrutura"><i></i><b>87 cm</b></span>
+          <span class="pin pin--tag" data-pin="-0.505,0.42,0.345" data-for="estrutura"><i></i><b>84 cm</b></span>
+          <span class="pin pin--tag" data-pin="0.505,-0.05,0" data-for="estrutura"><i></i><b>69 cm</b></span>
+          <span class="pin" data-pin="-0.3,0.55,0" data-for="portico" data-part="carriage"><i></i><b>Pórtico · eixos X e Y</b></span>
+          <span class="pin" data-pin="0,0.32,0.16" data-for="portico" data-part="carriage"><i></i><b>Pipetas · eixo Z</b></span>
+          <span class="pin pin--tag" data-pin="-0.19,0.16,-0.16" data-for="deck"><i></i><b>A1</b></span>
+          <span class="pin pin--tag pin--minor" data-pin="0.138,0.16,-0.16" data-for="deck"><i></i><b>A3</b></span>
+          <span class="pin pin--tag pin--minor" data-pin="-0.19,0.16,0.161" data-for="deck"><i></i><b>D1</b></span>
+          <span class="pin pin--tag" data-pin="0.138,0.16,0.161" data-for="deck"><i></i><b>D3</b></span>
+          <span class="pin pin--tag" data-pin="0.302,0.17,-0.053" data-for="deck"><i></i><b>Coluna 4</b></span>
+          <span class="pin" data-pin="0.33,0.6,0.37" data-for="interface"><i></i><b>Tela de 7″</b></span>
+          <span class="pin" data-pin="0.12,0.81,0.35" data-for="interface"><i></i><b>Luz de status</b></span>
+          <span class="pin" data-pin="-0.385,0.81,0.35" data-for="interface"><i></i><b>Câmera 2 MP</b></span>
+        </div>
+        <nav class="flex3d__rail" aria-label="Etapas da exploração do equipamento">
+          <button type="button" data-go="intro" aria-current="step"><span>01</span>Equipamento</button>
+          <button type="button" data-go="estrutura" aria-current="false"><span>02</span>Estrutura</button>
+          <button type="button" data-go="portico" aria-current="false"><span>03</span>Automação</button>
+          <button type="button" data-go="deck" aria-current="false"><span>04</span>Processo</button>
+          <button type="button" data-go="interface" aria-current="false"><span>05</span>Operação</button>
+          <button type="button" data-go="final" aria-current="false"><span>06</span>Conclusão</button>
+        </nav>
+      </div>
+
+      <div class="flex3d__steps container">
+        <article class="flex3d__step is-active" data-pose="intro">
+          <div class="flex3d__card">
+            <p class="eyebrow eyebrow-light">Automação, de perto</p>
+            <h3 id="flex3d-title" class="flex3d__title">Opentrons® Flex</h3>
+            <p>A automação completa das linhas NeoLISA® e NeoMAP® utiliza os sistemas da Hamilton® Robotics e Opentrons®. Explore aqui um Opentrons® Flex, como exemplo de plataforma.</p>
+            <p class="flex3d__note">Representação 3D ilustrativa, construída a partir das especificações publicadas pela Opentrons.</p>
+            <p class="flex3d__hint"><svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>Role para explorar o equipamento</p>
+          </div>
+        </article>
+        <article class="flex3d__step" data-pose="estrutura">
+          <div class="flex3d__card">
+            <p class="flex3d__n"><span>02</span>Estrutura</p>
+            <h3>Uma estação fechada</h3>
+            <p>Estrutura de chapa metálica e perfis de alumínio, com 87 × 69 × 84 cm. A porta frontal e as janelas laterais são de policarbonato transparente, e a porta se abre para dar acesso ao interior.</p>
+          </div>
+        </article>
+        <article class="flex3d__step" data-pose="portico">
+          <div class="flex3d__card">
+            <p class="flex3d__n"><span>03</span>Automação</p>
+            <h3>Movimento nos três eixos</h3>
+            <p>O pórtico se move nos eixos X e Y com precisão de 0,1 mm, acionado por motores de passo. As montagens das pipetas e da garra se deslocam no eixo Z até o ponto exato de cada protocolo.</p>
+          </div>
+        </article>
+        <article class="flex3d__step" data-pose="deck">
+          <div class="flex3d__card">
+            <p class="flex3d__n"><span>04</span>Processo</p>
+            <h3>Doze posições de trabalho</h3>
+            <p>Os protocolos são executados sobre o deck de alumínio usinado, com 12 posições no padrão ANSI/SLAS, de A1, no fundo à esquerda, a D3, na frente à direita. Na coluna 4, uma área de apoio opcional guarda material que só a garra alcança.</p>
+          </div>
+        </article>
+        <article class="flex3d__step" data-pose="interface">
+          <div class="flex3d__card">
+            <p class="flex3d__n"><span>05</span>Operação</p>
+            <h3>Controle na própria máquina</h3>
+            <p>Tela sensível ao toque de 7 polegadas na frente, à direita, faixa de luz de status no topo e câmera de 2 MP, que registra em foto e vídeo a execução dos protocolos.</p>
+          </div>
+        </article>
+        <article class="flex3d__step" data-pose="final">
+          <div class="flex3d__card">
+            <p class="flex3d__n"><span>06</span>Conclusão</p>
+            <h3>Automação para a rotina do seu laboratório</h3>
+            <p>Automação completa para as linhas NeoLISA® e NeoMAP®, com suporte constante da equipe científica da Intercientifica.</p>
+            <div class="flex3d__actions"><a class="btn btn-primary" href="#contato">Falar sobre automação<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+            <p class="flex3d__src">Especificações do equipamento: <a href="https://docs.opentrons.com/flex/system-description/specs/" target="_blank" rel="noopener">manual do Opentrons Flex<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></p>
           </div>
         </article>
       </div>
@@ -867,5 +1011,7 @@
 <button class="to-top" id="to-top" type="button" aria-label="Voltar ao topo"><svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></button>
 
 <script src="script.js"></script>
+<script type="module" src="assets/js/microesferas.js"></script>
+<script type="module" src="assets/js/flex.js"></script>
 </body>
 </html>
